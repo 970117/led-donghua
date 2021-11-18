@@ -1,4 +1,17 @@
 input.onButtonPressed(Button.A, function () {
+    if (input.buttonIsPressed(Button.B)) {
+    	
+    } else {
+        for (let y = 0; y <= 4; y++) {
+            for (let x = 0; x <= 4; x++) {
+                if (list[y][x] == 1) {
+                    led.plot(x, y)
+                } else {
+                    led.unplot(x, y)
+                }
+            }
+        }
+    }
     for (let y = 0; y <= 4; y++) {
         for (let x = 0; x <= 4; x++) {
             if (list[y][x] == 1) {
