@@ -1,17 +1,5 @@
+// 要一下一下按喔~
 input.onButtonPressed(Button.A, function () {
-    if (input.buttonIsPressed(Button.B)) {
-    	
-    } else {
-        for (let y = 0; y <= 4; y++) {
-            for (let x = 0; x <= 4; x++) {
-                if (list[y][x] == 1) {
-                    led.plot(x, y)
-                } else {
-                    led.unplot(x, y)
-                }
-            }
-        }
-    }
     for (let y = 0; y <= 4; y++) {
         for (let x = 0; x <= 4; x++) {
             if (list[y][x] == 1) {
@@ -37,6 +25,7 @@ input.onButtonPressed(Button.B, function () {
     list.unshift(list.pop())
     basic.pause(100)
 })
+// 確保機器是正常運作的判別方式
 let list: number[][] = []
 list = [
 [
